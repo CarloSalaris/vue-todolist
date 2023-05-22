@@ -36,8 +36,12 @@
     <!-- OUTPUT TASK -->
     <div class="taskContainer">
         <ul>
-            <li class="task" v-for="task in tasks" :class="task.doneTask ? 'doneTask':'' ">
+            <li class="task" v-for="(task, idx) in tasks" :class="task.doneTask ? 'doneTask':'' ">
                 {{task.text}}
+                
+                <button @click="removeTask(idx)">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
             </li>
         </ul>
     </div>

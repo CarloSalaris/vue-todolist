@@ -45,6 +45,9 @@ createApp({
 
             this.newTask = '';
             }
+        },
+        removeTask(value) {
+            this.tasks.splice(value, 1);
         }
     },
     mounted() {
