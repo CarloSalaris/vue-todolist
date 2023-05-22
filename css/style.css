@@ -74,11 +74,8 @@ button {
         border-bottom: 1px solid;
         display: flex;
         justify-content: space-between;
+        cursor: pointer;
     }
-
-        .taskContainer ul li span {
-            cursor: pointer;
-        }
 
         .taskContainer ul li button {
             height: 20px;

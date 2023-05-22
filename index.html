@@ -46,10 +46,11 @@
         <ul>
             <li class="task"
             v-for="(task, idx) in tasks"
-            :class="task.doneTask ? 'doneTask':'' ">
-                <span @click="doneUndone(idx)">{{task.text}}</span>
+            :class="task.doneTask ? 'doneTask':'' "
+            @click="doneUndone(idx)">
+                {{task.text}}
                 
-                <button @click="removeTask(idx)">
+                <button @click.stop="removeTask(idx)">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </li>
