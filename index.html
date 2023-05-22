@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font-awesome library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>vue-todolist</title>
+</head>
+
+<body>
+<div id="app" class="container">
+    
+    <!-- LOGO -->
+    <div class="logo">
+        <img :src="logoImage" alt="logo">
+    </div>
+
+    <!-- INPUT TASK -->
+    <div class="newTask">
+        <input type="text" placeholder="Nuova task">
+        <button type="submit">Aggiungi</button>
+    </div>
+
+    <!-- OUTPUT TASK -->
+    <div class="taskContainer">
+        <ul>
+            <li class="task">
+                Task da inserire in modo dinamico
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+<!-- VueJS -->
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<!-- JS Files  -->
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
