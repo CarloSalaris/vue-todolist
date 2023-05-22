@@ -19,12 +19,32 @@ createApp({
     data(){
         return {
             message:'messaggio di prova',
-            logoImage:'',
+            logoImage:'img/logo.png',
+            newTask: '',
+            tasks:[
+                {
+                    text:'task esempio',
+                    doneTask: true
+                },{
+                    text:'task2 esempio',
+                    doneTask: true
+                },{
+                    text:'task3 esempio',
+                    doneTask: false
+                },{
+                    text:'task4 esempio',
+                    doneTask: false
+                }
+            ]
         }
     },
     methods: {
-        methodName() {
-            //code
+        addTask() {
+            if (this.newTask !== '') {
+                this.tasks.unshift({text:this.newTask, doneTask: false});
+
+            this.newTask = '';
+            }
         }
     },
     mounted() {

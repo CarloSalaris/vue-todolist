@@ -28,16 +28,16 @@
     </div>
 
     <!-- INPUT TASK -->
-    <div class="newTask">
-        <input type="text" placeholder="Nuova task">
-        <button type="submit">Aggiungi</button>
-    </div>
+    <!-- <div class="newTask">
+        <input type="text" placeholder="Nuova task" v-model="newTask">
+        <button type="submit" @click="addTask">Aggiungi</button>
+    </div> -->
 
     <!-- OUTPUT TASK -->
     <div class="taskContainer">
         <ul>
-            <li class="task">
-                Task da inserire in modo dinamico
+            <li class="task" v-for="task in tasks" :class="task.doneTask ? 'doneTask':'' ">
+                {{task.text}}
             </li>
         </ul>
     </div>

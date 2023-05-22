@@ -12,14 +12,47 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+img {
+    max-width: 100%;
+}
+
+.logo {
+    width: 60%;
+    margin: auto;
+}
+
 .container {
-    width: 80%;
+    width: 70%;
+    max-width: 1000px;
     margin: auto;
     text-align: center;
     padding: 20px;
 }
 
+.newTask {
+    margin: 20px;
+}
+    .newTask input,
+    .newTask button {
+        border-radius: 7px;
+        padding: 5px;
+        margin: 0 5px;
+    }
+
+    .doneTask {
+        text-decoration: line-through;
+    }
+
 ul {
     list-style-type: none;
+    text-align: left;
+    background-color:antiquewhite;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+li {
+    padding: 5px 0;
+    border-bottom: 1px solid;
 }
 
