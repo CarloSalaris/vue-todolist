@@ -39,7 +39,10 @@
     <!-- OUTPUT TASK -->
     <div class="taskContainer">
         <ul>
-            <li class="task" v-for="(task, idx) in tasks" :class="task.doneTask ? 'doneTask':'' ">
+            <li class="task"
+            v-for="(task, idx) in tasks"
+            :class="task.doneTask ? 'doneTask':'' "
+            @click="doneUndone(idx)">
                 {{task.text}}
                 
                 <button @click="removeTask(idx)">

@@ -45,6 +45,7 @@ button {
 
     .doneTask {
         text-decoration: line-through;
+        background-color: beige;
     }
 
 ul {
@@ -56,7 +57,7 @@ ul {
 }
 
 li {
-    padding: 5px 0;
+    padding: 5px 10px;
     border-bottom: 1px solid;
     display: flex;
     justify-content: space-between;

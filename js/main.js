@@ -16,7 +16,7 @@ Predisporre un campo di input testuale e un pulsante “aggiungi”: cliccando s
 
 BONUS
 1- oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il task alla lista
-2- cliccando sul testo dell’item, invertire il valore della proprietà done del task corrispondente (se done era uguale a false, impostare true e viceversa) */
+2- cliccando sul testo dell’item invertire il valore della proprietà doneTask del task corrispondente (se done era uguale a false, impostare true e viceversa) */
 
 const{createApp} = Vue
 createApp({
@@ -52,6 +52,13 @@ createApp({
         },
         removeTask(value) {
             this.tasks.splice(value, 1);
+        },
+        doneUndone(index) {
+            if (this.tasks[index].doneTask === false) {
+                this.tasks[index].doneTask = true;
+            } else {
+                this.tasks[index].doneTask = false;
+            }
         }
     },
     mounted() {
