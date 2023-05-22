@@ -16,7 +16,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 
-    <title>vue-todolist</title>
+    <title>Vue - To-do list</title>
 </head>
 
 <body>
@@ -28,7 +28,7 @@
     </div>
 
     <!-- INPUT TASK -->
-    <div class="newTask">
+    <div class="newTask">     
         <input type="text"
             placeholder="Nuova task"
             v-model="newTask"
@@ -36,14 +36,18 @@
         <button type="submit" @click="addTask">Aggiungi</button>
     </div>
 
+    <!-- ERROR MESSAGE -->
+    <div v-if="error" class="errorMessage">
+        Non puoi aggiungere una task vuota!
+    </div>
+
     <!-- OUTPUT TASK -->
     <div class="taskContainer">
         <ul>
             <li class="task"
             v-for="(task, idx) in tasks"
-            :class="task.doneTask ? 'doneTask':'' "
-            @click="doneUndone(idx)">
-                {{task.text}}
+            :class="task.doneTask ? 'doneTask':'' ">
+                <span @click="doneUndone(idx)">{{task.text}}</span>
                 
                 <button @click="removeTask(idx)">
                     <i class="fa-solid fa-xmark"></i>
@@ -53,7 +57,6 @@
     </div>
 
 </div>
-
 
 
 

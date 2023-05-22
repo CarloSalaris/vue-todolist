@@ -22,21 +22,21 @@ const{createApp} = Vue
 createApp({
     data(){
         return {
-            message:'messaggio di prova',
             logoImage:'img/logo.png',
             newTask: '',
+            error: false,
             tasks:[
                 {
                     text:'task esempio',
                     doneTask: true
                 },{
-                    text:'task2 esempio',
+                    text:'task1 esempio',
                     doneTask: true
                 },{
-                    text:'task3 esempio',
+                    text:'task2 esempio',
                     doneTask: false
                 },{
-                    text:'task4 esempio',
+                    text:'task3 esempio',
                     doneTask: false
                 }
             ]
@@ -46,9 +46,11 @@ createApp({
         addTask() {
             if (this.newTask !== '') {
                 this.tasks.unshift({text:this.newTask, doneTask: false});
-
-            this.newTask = '';
+                this.error = false;
+            }else{
+                this.error = true;
             }
+            this.newTask = '';
         },
         removeTask(value) {
             this.tasks.splice(value, 1);

@@ -20,17 +20,35 @@ button {
     cursor: pointer;
 }
 
-.logo {
-    width: 60%;
-    margin: auto;
-}
-
 .container {
     width: 70%;
     max-width: 1000px;
     margin: auto;
     text-align: center;
     padding: 20px;
+}
+
+/***************
+    UTILITIES
+***************/
+
+.errorMessage {
+    color: red;
+    margin: 20px;
+}
+
+.doneTask {
+    text-decoration: line-through;
+    background-color: beige;
+}
+
+/***************
+    STRUCTURE
+***************/
+
+.logo {
+    width: 60%;
+    margin: auto;
 }
 
 .newTask {
@@ -43,29 +61,28 @@ button {
         margin: 0 5px;
     }
 
-    .doneTask {
-        text-decoration: line-through;
-        background-color: beige;
-    }
-
-ul {
+.taskContainer ul {
     list-style-type: none;
     text-align: left;
-    background-color:antiquewhite;
+    background-color:#f6f7f8;
     padding: 25px;
     border-radius: 10px;
 }
 
-li {
-    padding: 5px 10px;
-    border-bottom: 1px solid;
-    display: flex;
-    justify-content: space-between;
-}
+    .taskContainer ul li {
+        padding: 5px 10px;
+        border-bottom: 1px solid;
+        display: flex;
+        justify-content: space-between;
+    }
 
-li button {
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    border: none;
-}
+        .taskContainer ul li span {
+            cursor: pointer;
+        }
+
+        .taskContainer ul li button {
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            border: none;
+        }
