@@ -58,7 +58,11 @@ button {
     .newTask button {
         border-radius: 7px;
         padding: 5px;
-        margin: 0 5px;
+        margin: 5px;
+    }
+
+    .newTask input {
+        width: 60%;
     }
 
 .taskContainer ul {
