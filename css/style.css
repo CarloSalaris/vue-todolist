@@ -16,6 +16,10 @@ img {
     max-width: 100%;
 }
 
+button {
+    cursor: pointer;
+}
+
 .logo {
     width: 60%;
     margin: auto;
@@ -62,6 +66,5 @@ li button {
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    background-color: none;
     border: none;
 }
