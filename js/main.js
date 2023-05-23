@@ -56,12 +56,8 @@ createApp({
             this.tasks.splice(value, 1);
         },
         doneUndone(index) {
-            if (this.tasks[index].doneTask === false) {
-                this.tasks[index].doneTask = true;
-            } else {
-                this.tasks[index].doneTask = false;
+            this.tasks[index].doneTask = !this.tasks[index].doneTask;
             }
-        }
     },
     mounted() {
 	  //code
