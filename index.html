@@ -36,7 +36,7 @@
         <button type="submit" @click="addTask">Aggiungi</button>
     </div>
 
-    <!-- ERROR MESSAGE -->
+    <!-- ERROR MESSAGE (hidden) -->
     <div v-if="error" class="errorMessage">
         Non puoi aggiungere una task vuota!
     </div>
@@ -44,16 +44,25 @@
     <!-- OUTPUT TASK -->
     <div class="taskContainer">
         <ul>
+            <!-- Task element -->
             <li class="task"
-            v-for="(task, idx) in tasks"
-            :class="task.doneTask ? 'doneTask':'' "
-            @click="doneUndone(idx)">
-                {{task.text}}
+                v-for="(task, idx) in tasks"
+                :class="task.doneTask ? 'doneTask':'' "
+                @click="doneUndone(idx)"
+                tabindex="0"
+                @keyup.delete="removeTask(idx)">
                 
+                <!-- Task text (from input) -->
+                <span>{{task.text}}</span>
+                
+                <!-- "x" delete button -->
                 <button @click.stop="removeTask(idx)">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
+
             </li>
+
+            <!-- Empty task list message (hidden) -->
             <h2 v-if="tasks.length === 0" class="emptyTasks">Non ci sono task al momento...</h2>
         </ul>
     </div>
